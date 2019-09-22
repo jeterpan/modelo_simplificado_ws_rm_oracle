@@ -1,4 +1,4 @@
-FROM store/oracle/database-instantclient:12.2.0.1
+FROM node:12.10.0-alpine
 
 LABEL author = Jeter Costa e Silva
 
