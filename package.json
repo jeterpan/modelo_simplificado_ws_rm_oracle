@@ -1,0 +1,25 @@
+{
+  "name": "modelo_simplificado_ws_rm_oracle",
+  "version": "1.0.0",
+  "description": "Modelo simplificado de WS RM acessando banco Oracle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeterpan/modelo_simplificado_ws_rm_oracle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeterpan/modelo_simplificado_ws_rm_oracle/issues"
+  },
+  "homepage": "https://github.com/jeterpan/modelo_simplificado_ws_rm_oracle#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "oracledb": "^4.0.1"
+  }
+}
