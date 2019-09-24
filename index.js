@@ -88,7 +88,7 @@ app.get('/funcionario/:coligada/:matricula', function (req, res) {
               WHERE a.codcoligada = :f1 AND a.chapa = :f2
         `,
         {   f1: req.params.coligada
-          , f2: req.params.funcionario
+          , f2: req.params.matricula
         },
         function (err, result) {
           if (err) {
