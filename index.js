@@ -20,7 +20,7 @@ app.get('/coligadas', function (req, res) {
   doGetConnection(res, function(err, connection) {
     if (err)
       return;
-    connection.execute(
+      connection.execute(
       "select codcoligada, nomefantasia from gcoligada where codcoligada <> 0",
       function (err, result) {
         if (err) {
@@ -46,7 +46,7 @@ app.get('/secoes/:coligada', function (req, res) {
   doGetConnection(res, function(err, connection) {
     if (err)
       return;
-    connection.execute(
+      connection.execute(
       "SELECT codigo, descricao FROM psecao WHERE codcoligada = :f",
       { f: req.params.coligada },
       function (err, result) {
@@ -80,7 +80,7 @@ app.get('/funcionario/:coligada/:matricula', function (req, res) {
     doGetConnection(res, function(err, connection) {
       if (err)
         return;
-      connection.execute(
+        connection.execute(
         `    SELECT a.chapa, a.codsecao, b.descricao area, a.nome, a.codfuncao, c.descricao funcao 
                FROM pfunc a 
          INNER JOIN psecao b on a.codcoligada=b.codcoligada and a.codsecao=b.codigo 
@@ -95,14 +95,14 @@ app.get('/funcionario/:coligada/:matricula', function (req, res) {
             res.set('Content-Type', 'application/json');
             res.status(500).send(JSON.stringify({
               status: 500,
-              message: "Erro ao consultar a secão",
+              message: "Erro ao consultar a funcionario",
               detailed_message: err.message
             }));
           } else if (result.rows.length < 1) {
             res.set('Content-Type', 'application/json');
             res.status(404).send(JSON.stringify({
               status: 404,
-              message: "Secão não encontrada",
+              message: "Funcionário não encontrado",
               detailed_message: ""
             }));
           } else {
